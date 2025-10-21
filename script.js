@@ -1,4 +1,4 @@
-const url = "https://aapi.frankfurter.dev/v1/latest?base=USD&symbols=BRL";
+const url = "https://api.frankfurter.dev/v1/latest?base=USD&symbols=BRL";
 
 async function obterCotacao() {
   try {
@@ -26,8 +26,7 @@ async function obterCotacao() {
     document.getElementById("dados-formatados").innerHTML = `
       <p><strong>Moeda:</strong> ${info.moeda}</p>
       <p><strong>Data:</strong> ${info.data}</p>
-      <p><strong>Preço de Venda:</strong> R$ ${info.preco_venda.toFixed(2)}</p>
-    `;
+      <p><strong>Preço de Venda:</strong> R$ ${info.preco_venda.toFixed(2)}</p>`;
     
     document.getElementById("baixar").onclick = () => {
      
